@@ -6,33 +6,58 @@ function Experience() {
 
     const experiences = [
         {
-            title: "Software Engineer",
+            title: "Associate Delivery Level 3",
+            company: "SmartData Enterprises Inc. – Dehradun, IN",
+            period: "Jan 2026 – Present",
+            description: `
+        • Working on scalable healthcare sector applications with a focus on backend architecture, AI workflows, and enterprise-grade system development.
+        • Developed AI-powered workflows for report generation, audio report processing, automated summarization, and intelligent admin dashboards.
+        • Built scalable backend APIs and optimized data-processing workflows, improving system efficiency and reducing manual operations.
+        • Contributed to optimization initiatives that improved API response performance and reduced backend processing overhead by approximately 35%.
+        • Collaborated with cross-functional teams using Agile methodologies and modern development workflows.
+      `,
+        },
+        {
+            title: "Technology Senior Executive",
+            company: "Pearl Organisation – Dehradun, IN",
+            period: "May 2025 – Jan 2026",
+            description: `
+        • Managed and delivered 20+ projects including eCommerce platforms, vehicle booking systems, tour booking applications, and business management solutions.
+        • Handled multiple client projects simultaneously while ensuring timely delivery, production stability, and business-critical workflow support.
+        • Developed scalable web applications and backend services, improving frontend responsiveness through optimized rendering and reusable UI architecture.
+        • Integrated secure payment gateway systems and scalable backend workflows for high-traffic applications while supporting debugging, testing, deployment, and production operations.
+      `,
+        },
+        {
+            title: "Software Developer",
             company: "Codementees – Bengaluru, IN",
-            period: "Nov 2024 – Present",
+            period: "Sep 2024 – May 2025",
             description: `
-        • Built a Full-Stack Mentorship Platform using the MERN stack (MongoDB, Express.js, React.js, Node.js), enabling 500+ users to connect with tech mentors for coding mentorship, career advice, and educational content.
-        • Implemented Real-Time Messaging with Socket.io, facilitating seamless communication between 500+ mentors and mentees, boosting user engagement by 20%.
-        • Optimized database performance by 30% through efficient schema design and indexing, ensuring scalability for growing user traffic.
+        • Developed a Full-Stack Mentorship Platform using the MERN stack, connecting hundreds of mentees with experienced tech mentors.
+        • Built scalable backend APIs supporting authentication, real-time communication, and content management, including Socket.io messaging that increased engagement by 20%.
+        • Optimized MongoDB queries, aggregation pipelines, and indexing strategies, improving database performance by 40% and reducing API response times significantly.
+        • Improved frontend maintainability by building reusable React components, developing SEO-friendly pages, and applying Next.js server-side rendering best practices.
       `,
         },
         {
-            title: "Backend Developer",
+            title: "MERN Stack Developer",
             company: "Quitepaper – Bikaner, IN",
-            period: "Feb 2024 – Nov 2024",
+            period: "Jul 2023 – Aug 2024",
             description: `
-        • Designed and developed a scalable library management system that features seat booking, CRM modules, and real-time notifications, including an automatic seat allocation algorithm that reduces booking conflicts by 30%.
-        • Integrated a Secure Payment Gateway for 500+ daily users, deployed the platform in Render with 99.9% uptime, and delivered 10+ new features to improve usability and engagement.
-        • Optimized system performance by implementing efficient algorithms and ensuring seamless integration across platforms, enhancing user satisfaction by 25%.
+        • Designed and developed a scalable Library Management System with seat booking and CRM functionality used by multiple organizations.
+        • Engineered backend workflows and optimized query execution to improve booking efficiency and reduce system latency.
+        • Built an automated seat allocation algorithm reducing booking conflicts by 30% and implemented real-time notifications to improve platform responsiveness.
+        • Integrated secure payment gateway systems capable of handling 1000+ concurrent users using Socket.io, TypeScript, MongoDB, and scalable backend architectures.
       `,
         },
         {
-            title: "Full Stack Developer",
-            company: "Pro Learning Tree – Chandigarh, IN",
-            period: "Aug 2023 – Nov 2024",
+            title: "Software Engineer Intern",
+            company: "Canvas Craft Media – SAS Nagar, Punjab, IN",
+            period: "Jan 2023 – May 2023",
             description: `
-        • Developed a full-stack MERN web app for visa-related programs with RBAC, allowing super admins to manage institutes and user roles.
-        • Implemented features for institutes to upload educational content (audio, PDFs, MCQs, cue cards), manage student queries, track fees, attendance, and upload results. Also, college listing module with filters (course, country, city) to help users explore and apply to institutes.
-        • Utilized RESTful APIs, Agile methodologies, and Jira for scalable backend development, task management, and efficient project delivery.
+        • Worked on frontend development using React.js and modern JavaScript frameworks.
+        • Assisted in developing responsive UI components and integrating REST APIs.
+        • Collaborated with senior developers on debugging, testing, feature implementation, full-stack development, and Agile workflows.
       `,
         },
     ];
@@ -44,7 +69,6 @@ function Experience() {
                     <div class="list-group">
                         {experiences.map((experience, index) => (
                             <a
-                                // href="#"
                                 key={index}
                                 role="button"
                                 onClick={() => setSelectedItemIndex(index)}
@@ -69,15 +93,12 @@ function Experience() {
                     <h2 class="text-info mb-3">
                         {experiences[selectedItemIndex].company}
                     </h2>
-                    <p class="text-white">
+                    <p class="text-white" style={{ whiteSpace: "pre-line" }}>
                         {experiences[selectedItemIndex].description}
                     </p>
                 </div>
             </div>
         </div>
-
-
-
     );
 }
 

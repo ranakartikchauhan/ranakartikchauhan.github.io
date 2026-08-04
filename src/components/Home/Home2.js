@@ -19,11 +19,14 @@ function Home2() {
               <span className="purple"> About </span> Me
             </h1>
             <p className="home-about-body">
-              Results-Driven Software Developer having  experience in full-stack web development using the MERN
-              stack (MongoDB, Express.js, React, Node.js). Skilled in building scalable RESTful APIs, optimizing database
-              performance, and delivering end-to-end solutions. Led cross-functional teams to implement 10+ client-facing
-              features, boosting user engagement by 20%. Experienced in problem solving, code optimization, and collaboration
-              in Agile environments to deliver high-quality software.
+              Results-driven Full-Stack Software Engineer with 3+ years of experience building scalable web
+              applications and AI-powered systems used by thousands of users, using the MERN stack
+              (MongoDB, Express.js, React, Node.js) and modern AI frameworks. Currently building AI-powered
+              healthcare workflows, agentic AI pipelines, and RAG-based systems using LangChain, LangGraph,
+              and vector databases. Skilled in building scalable RESTful APIs, optimizing database performance,
+              and delivering end-to-end solutions, with backend and API performance improvements of up to
+              40% through database optimization and scalable architecture. Experienced in problem solving,
+              code optimization, and collaboration in Agile environments to deliver high-quality software.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
