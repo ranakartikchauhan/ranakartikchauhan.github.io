@@ -14,6 +14,7 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Experience from "./components/Experience/Experience";
+import Education from "./components/Education/Education";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -34,9 +35,10 @@ function App() {
         <ScrollToTop />
         <div>
           <section id="home"><Home /></section>
-          <section id=""><Experience/></section>
+          <section id="experience"><Experience/></section>
           <section id="projects"><Projects /></section>
           <section id="about"><About /></section>
+          <section id="education"><Education /></section>
           <section id="resume"><Resume /></section>
         </div>
         <Footer />

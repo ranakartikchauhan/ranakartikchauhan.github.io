@@ -4,10 +4,10 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-scroll"; // Import from react-scroll
-import { CgGitFork } from "react-icons/cg";
+import { CgGitFork, CgFileDocument } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import { AiFillStar, AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
-import { CgFileDocument } from "react-icons/cg";
+import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -53,14 +53,26 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link  style={{ cursor: "pointer" }} as={Link} to="about" smooth={true} duration={500} onClick={() => updateExpanded(false)}>
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              <Nav.Link  style={{ cursor: "pointer" }} as={Link} to="experience" smooth={true} duration={500} onClick={() => updateExpanded(false)}>
+                <FaBriefcase style={{ marginBottom: "2px" }} /> Experience
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link  style={{ cursor: "pointer" }} as={Link} to="projects" smooth={true} duration={500} onClick={() => updateExpanded(false)}>
                 <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link  style={{ cursor: "pointer" }} as={Link} to="about" smooth={true} duration={500} onClick={() => updateExpanded(false)}>
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> About & Skills
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link  style={{ cursor: "pointer" }} as={Link} to="education" smooth={true} duration={500} onClick={() => updateExpanded(false)}>
+                <FaGraduationCap style={{ marginBottom: "2px" }} /> Education
               </Nav.Link>
             </Nav.Item>
 

@@ -15,11 +15,11 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Row className="g-4" style={{ justifyContent: "center", paddingBottom: "10px" }}>
           {projectData.map((data, index) => (
-            <Col key={index} md={4} className="project-card">
+            <Col key={index} lg={4} md={6} className="d-flex align-items-stretch">
               <ProjectCard
-                imgPath={require(`../../Assets/Projects/${data.imgName}`)}
+                imgPath={new URL(`../../Assets/Projects/${data.imgName}`, import.meta.url).href}
                 isBlog={false}
                 title={data.title}
                 description={data.description}
@@ -28,7 +28,6 @@ function Projects() {
               />
             </Col>
           ))}
-
         </Row>
       </Container>
     </Container>

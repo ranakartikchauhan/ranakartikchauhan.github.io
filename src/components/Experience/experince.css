@@ -1,8 +1,58 @@
 .custom-style {
-    box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
-    color: white !important;
-    background-color: transparent !important;
-    opacity: 0.9 !important;
-    transition: all 0.5s ease 0s !important;
-    height: 100% !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4) !important;
+  color: white !important;
+  transition: all 0.4s ease 0s !important;
+}
+
+.custom-style:hover {
+  border-color: rgba(199, 112, 240, 0.6) !important;
+  box-shadow: 0 12px 35px 0 rgba(168, 85, 247, 0.25) !important;
+}
+
+.experience-bullet-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.experience-bullet-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.85rem;
+  color: #e2e8f0;
+  font-size: 1.02em;
+  line-height: 1.65;
+}
+
+.experience-bullet-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #c770f0;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+.exp-tab {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.3s ease !important;
+}
+
+.exp-tab:hover {
+  background: rgba(199, 112, 240, 0.08) !important;
+  border-color: rgba(199, 112, 240, 0.4) !important;
+}
+
+.active-exp-tab {
+  background: rgba(199, 112, 240, 0.15) !important;
+  border: 1px solid rgba(199, 112, 240, 0.6) !important;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3) !important;
 }

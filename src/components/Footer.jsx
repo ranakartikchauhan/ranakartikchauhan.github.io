@@ -4,6 +4,7 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineMail,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -16,27 +17,27 @@ function Footer() {
         <Col md={12} className="home-about-social">
           <h1>FIND ME ON</h1>
           <p>
-            Call or Whatsapp <span className="purple">+91 6396934224 </span>
+            Call or Whatsapp: <span className="purple">+91 6396934224</span> | Email: <a href="mailto:kartikchauhan336@gmail.com" className="purple" style={{ textDecoration: "none" }}>kartikchauhan336@gmail.com</a>
           </p>
           <ul className="home-about-social-links">
+            <li className="social-icons">
+              <a
+                href="mailto:kartikchauhan336@gmail.com"
+                className="icon-colour home-social-icons"
+                title="Email Me"
+              >
+                <AiOutlineMail />
+              </a>
+            </li>
             <li className="social-icons">
               <a
                 href="https://github.com/ranakartikchauhan"
                 target="_blank"
                 rel="noreferrer"
-                className="icon-colour  home-social-icons"
+                className="icon-colour home-social-icons"
+                title="GitHub"
               >
                 <AiFillGithub />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="/"
-                target="_blank"
-                rel="noreferrer"
-                className="icon-colour  home-social-icons"
-              >
-                <AiOutlineTwitter />
               </a>
             </li>
             <li className="social-icons">
@@ -44,7 +45,8 @@ function Footer() {
                 href="https://www.linkedin.com/in/ranakartikchauhan/"
                 target="_blank"
                 rel="noreferrer"
-                className="icon-colour  home-social-icons"
+                className="icon-colour home-social-icons"
+                title="LinkedIn"
               >
                 <FaLinkedinIn />
               </a>
@@ -55,6 +57,7 @@ function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="icon-colour home-social-icons"
+                title="Instagram"
               >
                 <AiFillInstagram />
               </a>
