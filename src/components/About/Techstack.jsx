@@ -68,7 +68,7 @@ function Techstack() {
     { name: "Express.js", icon: <SiExpress /> },
     { name: "REST APIs", icon: <DiNodejs /> },
     { name: "Socket.io", icon: <SiSocketdotio /> },
-    { name: "JWT Authentication", icon: <SiJsonwebtokens /> },
+    { name: "JWT Auth", icon: <SiJsonwebtokens /> },
   ];
 
   const aiSkills = [
@@ -79,12 +79,12 @@ function Techstack() {
     { name: "LangGraph", icon: <FaProjectDiagram style={{ color: "#ec4899" }} /> },
     { name: "RAG Pipelines", icon: <FaDatabase style={{ color: "#f59e0b" }} /> },
     { name: "AI Agents", icon: <FaRobot style={{ color: "#6366f1" }} /> },
-    { name: "Prompt Engineering", icon: <FaTerminal style={{ color: "#10b981" }} /> },
-    { name: "Vector Databases", icon: <FaLayerGroup style={{ color: "#8b5cf6" }} /> },
-    { name: "AI Workflow Automation", icon: <FaCogs style={{ color: "#06b6d4" }} /> },
-    { name: "Hugging Face / PyTorch", icon: <SiPytorch style={{ color: "#ee4c2c" }} /> },
+    { name: "Prompt Eng.", icon: <FaTerminal style={{ color: "#10b981" }} /> },
+    { name: "Vector DBs", icon: <FaLayerGroup style={{ color: "#8b5cf6" }} /> },
+    { name: "AI Automation", icon: <FaCogs style={{ color: "#06b6d4" }} /> },
+    { name: "PyTorch / HF", icon: <SiPytorch style={{ color: "#ee4c2c" }} /> },
     { name: "LangFuse", icon: <FaChartLine style={{ color: "#ef4444" }} /> },
-    { name: "Multi-Agent Systems", icon: <FaNetworkWired style={{ color: "#3b82f6" }} /> },
+    { name: "Multi-Agent", icon: <FaNetworkWired style={{ color: "#3b82f6" }} /> },
     { name: "Embeddings", icon: <SiTensorflow style={{ color: "#ff6f00" }} /> },
     { name: "Semantic Search", icon: <FaSearch style={{ color: "#14b8a6" }} /> },
   ];
@@ -107,64 +107,60 @@ function Techstack() {
   return (
     <div style={{ paddingBottom: "20px" }}>
       {/* Programming Languages */}
-      <h3 className="purple text-center my-3" style={{ color: "#c770f0" }}>
+      <h3 className="purple text-center my-4" style={{ color: "#c770f0", fontWeight: "600" }}>
         Programming Languages
       </h3>
-      <Row style={{ justifyContent: "center", paddingBottom: "20px" }}>
+      <Row className="g-3 justify-content-center pb-3">
         {programmingSkills.map((skill, idx) => (
-          <Col xs={4} md={2} className="tech-icons" key={idx}>
-            {skill.icon}
-            <br />
-            <div className="btn btn-outline-primary" style={{ marginTop: "10px" }}>
-              {skill.name}
+          <Col xs={6} sm={4} md={3} lg={2} key={idx}>
+            <div className="tech-icon-card">
+              <div className="tech-icon-svg">{skill.icon}</div>
+              <span className="tech-icon-label">{skill.name}</span>
             </div>
           </Col>
         ))}
       </Row>
 
       {/* Frontend & Backend */}
-      <h3 className="purple text-center my-3" style={{ color: "#c770f0" }}>
+      <h3 className="purple text-center my-4" style={{ color: "#c770f0", fontWeight: "600" }}>
         Frontend & Backend Engineering
       </h3>
-      <Row style={{ justifyContent: "center", paddingBottom: "20px" }}>
+      <Row className="g-3 justify-content-center pb-3">
         {[...frontendSkills, ...backendSkills].map((skill, idx) => (
-          <Col xs={4} md={2} className="tech-icons" key={idx}>
-            {skill.icon}
-            <br />
-            <div className="btn btn-outline-primary" style={{ marginTop: "10px" }}>
-              {skill.name}
+          <Col xs={6} sm={4} md={3} lg={2} key={idx}>
+            <div className="tech-icon-card">
+              <div className="tech-icon-svg">{skill.icon}</div>
+              <span className="tech-icon-label">{skill.name}</span>
             </div>
           </Col>
         ))}
       </Row>
 
       {/* AI & Agentic AI */}
-      <h3 className="purple text-center my-3" style={{ color: "#c770f0" }}>
+      <h3 className="purple text-center my-4" style={{ color: "#c770f0", fontWeight: "600" }}>
         AI & Agentic AI Systems
       </h3>
-      <Row style={{ justifyContent: "center", paddingBottom: "30px" }}>
+      <Row className="g-3 justify-content-center pb-4">
         {aiSkills.map((skill, idx) => (
-          <Col xs={6} md={3} className="tech-icons" key={idx}>
-            {skill.icon}
-            <br />
-            <div className="btn btn-outline-primary" style={{ marginTop: "10px", fontSize: "0.85em" }}>
-              {skill.name}
+          <Col xs={6} sm={4} md={3} lg={2} key={idx}>
+            <div className="tech-icon-card">
+              <div className="tech-icon-svg">{skill.icon}</div>
+              <span className="tech-icon-label">{skill.name}</span>
             </div>
           </Col>
         ))}
       </Row>
 
       {/* Databases & Cloud/DevOps */}
-      <h3 className="purple text-center my-3" style={{ color: "#c770f0" }}>
+      <h3 className="purple text-center my-4" style={{ color: "#c770f0", fontWeight: "600" }}>
         Databases, Cloud & DevOps
       </h3>
-      <Row style={{ justifyContent: "center", paddingBottom: "30px" }}>
+      <Row className="g-3 justify-content-center pb-4">
         {[...dbSkills, ...cloudDevOpsSkills].map((skill, idx) => (
-          <Col xs={4} md={2} className="tech-icons" key={idx}>
-            {skill.icon}
-            <br />
-            <div className="btn btn-outline-primary" style={{ marginTop: "10px" }}>
-              {skill.name}
+          <Col xs={6} sm={4} md={3} lg={2} key={idx}>
+            <div className="tech-icon-card">
+              <div className="tech-icon-svg">{skill.icon}</div>
+              <span className="tech-icon-label">{skill.name}</span>
             </div>
           </Col>
         ))}

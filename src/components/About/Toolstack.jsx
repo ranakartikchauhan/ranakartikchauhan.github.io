@@ -20,13 +20,12 @@ function Toolstack() {
   ];
 
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+    <Row className="g-3 justify-content-center pb-5">
       {tools.map((tool, idx) => (
-        <Col xs={4} md={2} className="tech-icons" key={idx}>
-          {tool.icon}
-          <br />
-          <div className="btn btn-outline-primary" style={{ marginTop: "10px" }}>
-            {tool.name}
+        <Col xs={6} sm={4} md={3} lg={2} key={idx}>
+          <div className="tech-icon-card">
+            <div className="tech-icon-svg">{tool.icon}</div>
+            <span className="tech-icon-label">{tool.name}</span>
           </div>
         </Col>
       ))}
