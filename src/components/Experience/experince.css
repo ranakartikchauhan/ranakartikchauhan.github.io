@@ -40,19 +40,42 @@
   line-height: 1.4;
 }
 
-.exp-tab {
-  background: rgba(255, 255, 255, 0.02) !important;
+.exp-tab-button {
+  background: rgba(255, 255, 255, 0.03) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  transition: all 0.3s ease !important;
+  transition: all 0.25s ease-in-out !important;
+  cursor: pointer !important;
+  position: relative;
+  z-index: 10;
+  outline: none !important;
 }
 
-.exp-tab:hover {
+.exp-tab-button:hover {
   background: rgba(199, 112, 240, 0.08) !important;
   border-color: rgba(199, 112, 240, 0.4) !important;
 }
 
-.active-exp-tab {
-  background: rgba(199, 112, 240, 0.15) !important;
-  border: 1px solid rgba(199, 112, 240, 0.6) !important;
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3) !important;
+.exp-tab-button.active {
+  background: rgba(199, 112, 240, 0.18) !important;
+  border: 1px solid rgba(199, 112, 240, 0.7) !important;
+  border-left: 4px solid #c770f0 !important;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.35) !important;
+}
+
+@media (max-width: 991px) {
+  .experience-tabs {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    padding-bottom: 8px !important;
+    scrollbar-width: thin;
+  }
+  .exp-tab-button {
+    flex: 0 0 auto !important;
+    min-width: 160px !important;
+    width: auto !important;
+  }
+  .exp-tab-button.active {
+    border-left: 1px solid rgba(199, 112, 240, 0.7) !important;
+    border-bottom: 3px solid #c770f0 !important;
+  }
 }

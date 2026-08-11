@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./experince.css";
 
 function Experience() {
-  const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
+  const [selectedItemIndex, setSelectedItemIndex] = useState(0);
 
   const experiences = [
     {
@@ -70,24 +70,30 @@ function Experience() {
       </h1>
       <div className="row g-4">
         <div className="col-lg-4 col-md-12">
-          <div className="list-group experience-tabs">
+          <div className="experience-tabs d-flex flex-column gap-2">
             {experiences.map((experience, index) => (
               <button
                 key={index}
                 type="button"
                 onClick={() => setSelectedItemIndex(index)}
-                className={`list-group-item list-group-item-action border-0 mb-2 rounded p-3 ${
-                  selectedItemIndex === index ? "active-exp-tab" : "exp-tab"
+                className={`exp-tab-button border-0 rounded p-3 text-start w-100 ${
+                  selectedItemIndex === index ? "active" : ""
                 }`}
-                style={{ textAlign: "left" }}
               >
-                <strong style={{ color: selectedItemIndex === index ? "#c770f0" : "#ffffff", fontSize: "1.05em" }}>
-                  {experience.company.split("–")[0].trim()}
-                </strong>
-                <br />
-                <small style={{ color: selectedItemIndex === index ? "#e2e8f0" : "#a1a1aa" }}>
-                  {experience.period}
-                </small>
+                <div style={{ pointerEvents: "none" }}>
+                  <strong
+                    style={{
+                      color: selectedItemIndex === index ? "#c770f0" : "#ffffff",
+                      fontSize: "1.05em",
+                      display: "block",
+                    }}
+                  >
+                    {experience.company.split("–")[0].trim()}
+                  </strong>
+                  <small style={{ color: selectedItemIndex === index ? "#e2e8f0" : "#a1a1aa" }}>
+                    {experience.period}
+                  </small>
+                </div>
               </button>
             ))}
           </div>
